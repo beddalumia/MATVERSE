@@ -1,3 +1,6 @@
 [submodule "export_fig"]
 	path = export_fig
 	url = https://github.com/altmany/export_fig.git
+[submodule "fig2svg"]
+	path = fig2svg
+	url = https://github.com/kupiqu/fig2svg.git

@@ -26,3 +26,20 @@ masters the /undocumented/. Also a bizarre creature of theirs, then has
 taken the big leap leading into the scriptverse all the magic of cprintf!
 ```
 > The _witcher_ of the second day is [@altmany](https://github.com/altmany).
+
+###### @ THE CRYSTALS: IF EVEN ALTMANY FAILS, `PLOT2SVG` RETURNS FOR THE SAVE
+
+```
+Third day: no matter how much mastery in the craft, a wrapper would 
+           remain a wrap; if the vectorial 'painters' are doomed to
+           fail, we have no hope avoid the pain, unless a new hero
+           comes into play... so here is fig2svg, the forked phoenix
+           of plot2svg the bereaved!
+
+A totally independent figures-saver, aimed at vectorial-graphics only,
+that can handle what the painters renderer never could and never would…
+transparency! But not lighting, life is difficult. Not at all impressed
+Altmany the savvy ferries one of his souls into the scriptverse, helping
+to gauge our projects and desires!
+```
+> The jedi-knight of the third day is [@kupiqu](https://github.com/kupiqu), prideful padawan of [@jschwizer99](https://github.com/jschwizer99).
