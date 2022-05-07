@@ -11,3 +11,19 @@ things, from fine-tuning plots to looking for strings.
 
 > The heroes of the first day are @chadagreene and @msecli.
 ```
+
+###### @ A NEW HOPE: `EXPORT_FIG`, THE CELEBRATED WRAPPER THAT FIXES `PRINT`
+
+```
+Second day: a new verse arrives, as a git submodule, it's the mighty
+            export_fig, a holy wrapper for the infamously broken print
+            function, whose insanely erratic behavior has plagued most
+            matlabians since ever... eventually our figures find peace.
+
+The first submodule arrived, bringing a whole new world of delightfully
+printed pictures, after all the misery of the ancient era. Glory to the
+wrapper and to the writer, so well-versed in the matlabic arts that even
+masters the /undocumented/. Also a bizarre creature of theirs, then has 
+taken the big leap leading into the scriptverse all the magic of cprintf!
+
+> The /witcher/ of the second day is @altmany.
