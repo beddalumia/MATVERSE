@@ -1,0 +1,45 @@
+%% LEAVE THE MATVERSE
+%
+% >> matverse.leave($path)
+%
+% To leave the MATVERSE whose entrance it's at $path,
+% if you happen to omit it would be the default...
+%
+% Then, after leaving, and realizing it's gone:
+%
+%   > if you happen to desire a way back: matverse.enter()     ☮ 
+%   > in the case something has went bad: restoredefaultpath() ⚕ 
+
+function leave(folder)
+
+    if nargin < 1
+        self   = true;
+        folder = userpath;
+        % > Default: MATVERSE destroys itself
+    else
+        self = false;
+        CUSTOMVERSE = split(folder,filesep);
+        if isempty(CUSTOMVERSE{end})
+            CUSTOMVERSE = CUSTOMVERSE{end-1};
+        else
+            CUSTOMVERSE = CUSTOMVERSE{end};
+        end
+        % > User-defined CUSTOMVERSE to init..
+    end 
+    
+    MATVERSE = xgenpath(folder,'\.git');
+    rmpath(MATVERSE);
+    
+    % Final greetings!
+    fprintf('\n')
+    if self
+        fprintf('☄☄☄ MATVERSE DESTROYED ☄☄☄ \n')
+    else
+        fprintf('☄☄☄ %sVERSE DESTROYED ☄☄☄\n',CUSTOMVERSE)
+    end
+    fprintf('\n')
+    fprintf('  > if you happen to desire a way back: matverse.enter()     ☮ \n')
+    fprintf('  > in the case something has went bad: restoredefaultpath() ⚕ \n')
+    fprintf('  \n                                                           \n')
+
+end
