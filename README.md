@@ -8,9 +8,8 @@ First day: there's a way to enter and a way to leave, the sacred path
 For now the alternate-universe exist and it's unique, amounting to a
 curated collection of scripts. They are mostly unrelated and do many
 things, from fine-tuning plots to looking for strings.
-
-> The heroes of the first day are @chadagreene and @msecli.
 ```
+> The heroes of the first day are [@chadagreene](https://github.com/chadagreene) and [@matteosecli](https://github.com/matteosecli).
 
 ###### @ A NEW HOPE: `EXPORT_FIG`, THE CELEBRATED WRAPPER THAT FIXES `PRINT`
 
@@ -25,5 +24,5 @@ printed pictures, after all the misery of the ancient era. Glory to the
 wrapper and to the writer, so well-versed in the matlabic arts that even
 masters the /undocumented/. Also a bizarre creature of theirs, then has 
 taken the big leap leading into the scriptverse all the magic of cprintf!
-
-> The /witcher/ of the second day is @altmany.
+```
+> The _witcher_ of the second day is [@altmany](https://github.com/altmany).
