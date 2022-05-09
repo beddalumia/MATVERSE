@@ -7,6 +7,7 @@
 %
 % Then, after leaving, and realizing it's gone:
 %
+%   > if you wish to go away permanently: savepath()           ☠︎
 %   > if you happen to desire a way back: matverse.enter()     ☮ 
 %   > in the case something has went bad: restoredefaultpath() ⚕ 
 
@@ -14,7 +15,7 @@ function leave(folder)
 
     if nargin < 1
         self   = true;
-        folder = userpath;
+        folder = erase(mfilename('fullpath'),'+matverse/leave');
         % > Default: MATVERSE destroys itself
     else
         self = false;
@@ -29,6 +30,7 @@ function leave(folder)
     
     MATVERSE = xgenpath(folder,'\.git');
     rmpath(MATVERSE);
+    addpath(userpath); % Safety-measure
     
     % Final greetings!
     fprintf('\n')
@@ -38,6 +40,7 @@ function leave(folder)
         fprintf('☄☄☄ %sVERSE DESTROYED ☄☄☄\n',CUSTOMVERSE)
     end
     fprintf('\n')
+    fprintf('  > if you wish to go away permanently: savepath()           ☠︎ \n')
     fprintf('  > if you happen to desire a way back: matverse.enter()     ☮ \n')
     fprintf('  > in the case something has went bad: restoredefaultpath() ⚕ \n')
     fprintf('  \n                                                           \n')

@@ -15,7 +15,7 @@ function enter(folder)
 
     if nargin < 1
         self   = true;
-        folder = userpath;
+        folder = erase(mfilename('fullpath'),'+matverse/enter');
         % > Default: MATVERSE initiates itself
     else
         self = false;
