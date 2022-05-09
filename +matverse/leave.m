@@ -28,7 +28,7 @@ function leave(folder)
         % > User-defined CUSTOMVERSE to init..
     end 
     
-    MATVERSE = xgenpath(folder,'\.git');
+    MATVERSE = genpath(folder);
     rmpath(MATVERSE);
     addpath(userpath); % Safety-measure
     

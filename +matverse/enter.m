@@ -28,7 +28,7 @@ function enter(folder)
         % > User-defined CUSTOMVERSE to init..
     end 
     
-    MATVERSE = xgenpath(folder,'\.git');
+    MATVERSE = genpath(folder);
     addpath(MATVERSE);
     
     % Better to check for duplicates
