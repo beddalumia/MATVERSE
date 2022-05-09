@@ -18,9 +18,9 @@ function find_duplicate(folder)
     R=arrayfun(@(x) repmat({x.path},size(x.m)),P,'UniformOutput',false);
     R=vertcat(R{:});
     [C,~,~]=unique(Q);
+    warnflag=false;
     for c=1:numel(C)
         ind=strcmpi(C{c},Q);
-        warnflag=false;
         if sum(ind)>1
            fprintf(2,'\n WARNING: duplicate %s at paths:\n\n',C{c})
            fprintf(2,' > %s\n',R{ind})
