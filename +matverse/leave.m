@@ -29,20 +29,22 @@ function leave(folder)
     end 
     
     MATVERSE = xgenpath(folder,'**/*.git');
-    rmpath(MATVERSE);
+    oldpath = rmpath(MATVERSE);
     addpath(userpath); % Safety-measure
+    printflag = not(isequal(oldpath,path));
     
     % Final greetings!
-    fprintf('\n')
-    if self
-        fprintf('☄☄☄ MATVERSE DESTROYED ☄☄☄ \n')
-    else
-        fprintf('☄☄☄ %sVERSE DESTROYED ☄☄☄\n',CUSTOMVERSE)
+    if printflag
+        fprintf('\n')
+        if self
+            fprintf('☄☄☄ MATVERSE DESTROYED ☄☄☄ \n')
+        else
+            fprintf('☄☄☄ %sVERSE DESTROYED ☄☄☄\n',CUSTOMVERSE)
+        end
+        fprintf('\n')
+        fprintf('  > if you wish to go away permanently: savepath()           ☠︎ \n')
+        fprintf('  > if you happen to desire a way back: matverse.enter()     ☮ \n')
+        fprintf('  > in the case something has went bad: restoredefaultpath() ⚕ \n')
+        fprintf('  \n                                                           \n')
     end
-    fprintf('\n')
-    fprintf('  > if you wish to go away permanently: savepath()           ☠︎ \n')
-    fprintf('  > if you happen to desire a way back: matverse.enter()     ☮ \n')
-    fprintf('  > in the case something has went bad: restoredefaultpath() ⚕ \n')
-    fprintf('  \n                                                           \n')
-
 end

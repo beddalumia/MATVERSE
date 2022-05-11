@@ -29,22 +29,25 @@ function enter(folder)
     end 
     
     MATVERSE = xgenpath(folder,'**/*.git');
-    addpath(MATVERSE);
+    oldpath = addpath(MATVERSE);
+    printflag = not(isequal(oldpath,path));
     
     % Better to check for duplicates
     find_duplicate(folder);
     
     % Let the user decide if to save or not to save...
-    fprintf('\n')
-    if self
-        fprintf('✦✧✦ WELCOME TO THE MATVERSE ✧✦✧\n')
-    else
-        fprintf('✦✧✦ WELCOME TO THE %sVERSE ✧✦✧\n',CUSTOMVERSE)
+    if printflag
+        fprintf('\n')
+        if self
+            fprintf('✦✧✦ WELCOME TO THE MATVERSE ✧✦✧\n')
+        else
+            fprintf('✦✧✦ WELCOME TO THE %sVERSE ✧✦✧\n',CUSTOMVERSE)
+        end
+        fprintf('\n')
+        fprintf('  > if you wish to stay permanently: savepath() ☸ \n')
+        fprintf('  > else enjoy as you want and matverse.leave() ⚚ \n')
+        fprintf('  > if something went bad: restoredefaultpath() ⚕ \n')
+        fprintf('  \n                                              \n')
     end
-    fprintf('\n')
-    fprintf('  > if you wish to stay permanently: savepath() ☸ \n')
-    fprintf('  > else enjoy as you want and matverse.leave() ⚚ \n')
-    fprintf('  > if something went bad: restoredefaultpath() ⚕ \n')
-    fprintf('  \n                                              \n')
 
 end
