@@ -7,7 +7,7 @@
 %
 % Then, after leaving, and realizing it's gone:
 %
-%   > if you wish to go away permanently: savepath()           ☠︎
+%   > if you wish to go away permanently: savepath()           ☠
 %   > if you happen to desire a way back: matverse.enter()     ☮ 
 %   > in the case something has went bad: restoredefaultpath() ⚕ 
 
@@ -42,7 +42,7 @@ function leave(folder)
             fprintf('☄☄☄ %sVERSE DESTROYED ☄☄☄\n',CUSTOMVERSE)
         end
         fprintf('\n')
-        fprintf('  > if you wish to go away permanently: savepath()           ☠︎ \n')
+        fprintf('  > if you wish to go away permanently: savepath()           ☠ \n')
         fprintf('  > if you happen to desire a way back: matverse.enter()     ☮ \n')
         fprintf('  > in the case something has went bad: restoredefaultpath() ⚕ \n')
         fprintf('  \n                                                           \n')
