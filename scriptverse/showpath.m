@@ -8,10 +8,10 @@ function showpath(folder)
 %
 % See also pathshow (which is an alias)
     if nargin < 1
-        p = strsplit(path,':');
+        p = strsplit(path,pathsep);
     else
         p = genpath(folder);
-        p = strsplit(p,':');
+        p = strsplit(p,pathsep);
     end
     for i = length(p):-1:1
         fprintf('\t%s\n\n',p{i})

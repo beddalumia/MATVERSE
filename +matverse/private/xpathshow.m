@@ -11,10 +11,10 @@ function xpathshow(dir)
 %   custom recursive path. So to be
 %   compatible with matverse rules.
     if nargin < 1
-        p = strsplit(path,':');
+        p = strsplit(path,pathsep);
     else
         p = xgenpath(dir,'**/*.git');
-        p = strsplit(p,':');
+        p = strsplit(p,pathsep);
     end
     for i = length(p):-1:1
         fprintf('%s\n',p{i})

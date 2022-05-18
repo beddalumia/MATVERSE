@@ -15,7 +15,7 @@ function leave(folder)
 
     if nargin < 1
         self   = true;
-        folder = erase(mfilename('fullpath'),'+matverse/leave');
+        folder = erase(fileparts(mfilename('fullpath')),'+matverse');
         % > Default: MATVERSE destroys itself
     else
         self = false;

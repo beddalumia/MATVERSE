@@ -11,7 +11,7 @@ function vista(folder)
 
     if nargin < 1
         self   = true;
-        folder = erase(mfilename('fullpath'),'+matverse/vista');
+        folder = erase(fileparts(mfilename('fullpath')),'+matverse');
         % > Default: MATVERSE introspects itself
     else
         self = false;
