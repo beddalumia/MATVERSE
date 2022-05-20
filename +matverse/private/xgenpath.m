@@ -55,8 +55,8 @@ function p = xgenpath(d,excludeDirs)
 	dirs = files(isdir); % select only directory entries from the current listing
 	for i=1:length(dirs)
 		dirname = dirs(i).name;
-		%NOTE: regexp ignores '.', '..', '@.*', and 'private' directories by default. 
-		if ~any(regexp(dirname,['^\.$|^\.\.$|^\@.*|^private$|' excludeStr ],'start'))
+		%NOTE: regexp ignores '.', '..', '@.*','+.*', 'resources' and 'private' directories by default. 
+		if ~any(regexp(dirname,['^\.$|^\.\.$|^\@.*|^\+.*|^resources$|^private$|' excludeStr ],'start'))
 		  p = [p xgenpath(fullfile(d,dirname),excludeStr)]; % recursive calling of this function.
 		end
 	end
