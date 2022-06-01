@@ -56,7 +56,7 @@ function [ rgb ] = hex2rgb(hex,range)
 % as input. 
 % 
 % * * * * * * * * * * * * * * * * * * * * 
-% See also rgb2hex, dec2hex, hex2num, and ColorSpec. 
+% See also rgb2hex, dec2hex, and hex2num. 
 % 
 
     %% Input checks:

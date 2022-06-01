@@ -24,7 +24,12 @@ function vista(folder)
         % > User-defined CUSTOMVERSE to spy..
     end 
     
-    xpathshow(folder);
+    if exist('__octave_config_info__','builtin')
+        p = genpath(folder);
+        disp(strsplit(p,pathsep));
+    else
+        xpathshow(folder); % Finer MATLAB option
+    end
     
     % Would the user decide to enter... promote it!
     fprintf('\n')

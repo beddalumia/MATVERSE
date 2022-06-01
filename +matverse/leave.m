@@ -28,9 +28,15 @@ function leave(folder)
         % > User-defined CUSTOMVERSE to init..
     end 
     
-    MATVERSE = xgenpath(folder,'**/*.git');
+    try
+        MATVERSE = xgenpath(folder,'**/*.git');
+    catch
+        MATVERSE = genpath(folder);
+    end
     oldpath = rmpath(MATVERSE);
-    addpath(userpath); % Safety-measure
+    if ~exist('__octave_config_info__','builtin')
+        addpath(userpath); % Safety-measure
+    end
     printflag = not(isequal(oldpath,path));
     
     % Final greetings!

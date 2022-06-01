@@ -37,7 +37,7 @@ function [ hex ] = rgb2hex(rgb)
 % his suggestions. 
 % 
 % * * * * * * * * * * * * * * * * * * * * 
-% See also hex2rgb, dec2hex, hex2num, and ColorSpec. 
+% See also hex2rgb, dec2hex, and hex2num. 
 
     %% Check inputs: 
     assert(nargin==1,'This function requires an RGB input.') 
