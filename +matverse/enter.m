@@ -29,7 +29,7 @@ function enter(folder)
     end 
     
     try
-        MATVERSE = xgenpath(folder,'**/*.git');
+        MATVERSE = xgenpath(folder,'^\..*');
     catch
         MATVERSE = genpath(folder);
     end
